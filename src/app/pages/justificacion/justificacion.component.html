@@ -1,0 +1,27 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Justificación del Framework</h1>
+    <p class="subtitle">¿Por qué utilizar Angular en desarrollo web moderno?</p>
+  </div>
+
+  <div class="content">
+    <div class="cards-grid">
+      <div *ngFor="let point of justificationPoints" class="card">
+        <h2 class="card__title">{{ point.title }}</h2>
+        <p class="card__description">{{ point.description }}</p>
+      </div>
+    </div>
+
+    <div class="advantages-section">
+      <h2>Ventajas principales</h2>
+      <ul class="advantages-list">
+        <li><strong>Arquitectura modular:</strong> Facilita la organización y mantenimiento del código</li>
+        <li><strong>TypeScript:</strong> Proporciona tipado estático y mejor IDE support</li>
+        <li><strong>Inyección de dependencias:</strong> Mejora la testabilidad y reutilización de código</li>
+        <li><strong>Two-way data binding:</strong> Sincronización automática entre modelo y vista</li>
+        <li><strong>Comunidad activa:</strong> Amplio ecosistema y documentación disponible</li>
+        <li><strong>CLI potente:</strong> Angular CLI automatiza tareas comunes de desarrollo</li>
+      </ul>
+    </div>
+  </div>
+</div>

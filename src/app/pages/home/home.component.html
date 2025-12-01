@@ -1,0 +1,45 @@
+<div class="home-container">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Tutorial Completo de Angular</h1>
+      <p class="hero-subtitle">Aprende a dominar el framework más popular para desarrollar aplicaciones web modernas</p>
+      
+      <!-- Video Tutorial -->
+      <div class="video-container">
+        <h3 class="video-title">📹 Video Tutorial</h3>
+        <p class="video-description">Tutorial Angular: Instalación y Primeros Pasos | Actividad 2 - UNIR</p>
+        <div class="video-wrapper">
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/nnr_SlffD24" 
+            title="Tutorial Angular: Instalación y Primeros Pasos | Actividad 2 - UNIR" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sections-container">
+    <h2 class="sections-title">Contenido del Tutorial</h2>
+    <div class="sections-grid">
+      <div *ngFor="let section of sections" class="section-card" [routerLink]="section.route">
+        <div class="section-icon">{{ section.icon }}</div>
+        <h3>{{ section.title }}</h3>
+        <p>{{ section.description }}</p>
+        <div class="card-action">
+          <span>Ir a esta sección →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>¿Listo para comenzar?</h2>
+    <p>Empieza con la sección de Justificación para entender por qué Angular es tan importante en el desarrollo web actual.</p>
+    <a routerLink="/justificacion" class="cta-button">Comenzar Tutorial</a>
+  </div>
+</div>

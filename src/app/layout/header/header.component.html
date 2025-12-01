@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a [routerLink]="'/inicio'" class="logo-link">
+        <h1>Angular Tutorial</h1>
+      </a>
+    </div>
+    <nav class="header__nav">
+      <a
+        *ngFor="let item of navItems"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        class="nav-link"
+      >
+        {{ item.label }}
+      </a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,78 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Explicación del Funcionamiento</h1>
+    <p class="subtitle">Conceptos clave y arquitectura de Angular</p>
+  </div>
+
+  <div class="content">
+    <section class="section">
+      <h2>¿Sobre qué actúa Angular?</h2>
+      <p class="intro-text">
+        Angular actúa sobre <strong>componentes</strong>, que son bloques de código que contienen elementos HTML
+        (vistas), lógica TypeScript (componente) y estilos CSS/SCSS. Estos componentes se pueden reutilizar y
+        combinar para crear aplicaciones web complejas.
+      </p>
+
+      <div class="architecture-grid">
+        <div *ngFor="let item of arquitecturaItems" class="architecture-card">
+          <h3>{{ item.title }}</h3>
+          <p class="description">{{ item.description }}</p>
+          <div class="example-box">
+            <code>{{ item.example }}</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Estructura de archivos de un componente</h2>
+      <div class="file-types">
+        <div *ngFor="let file of fileTypes" class="file-item">
+          <div class="file-icon" [style.background-color]="file.color">
+            {{ file.ext }}
+          </div>
+          <div class="file-info">
+            <h4>{{ file.name }}</h4>
+            <p>{{ file.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>¿Cómo se referencian los archivos?</h2>
+      <p class="intro-text">
+        En Angular, los archivos se referencian a través de distintos mecanismos de vinculación de datos
+        y componentes. Los más importantes son:
+      </p>
+
+      <div class="references-table">
+        <div class="table-header">
+          <div class="table-cell">Método</div>
+          <div class="table-cell">Sintaxis</div>
+          <div class="table-cell">Uso</div>
+        </div>
+        <div *ngFor="let ref of referencingMethods" class="table-row">
+          <div class="table-cell"><strong>{{ ref.method }}</strong></div>
+          <div class="table-cell">
+            <code>{{ ref.syntax }}</code>
+          </div>
+          <div class="table-cell">{{ ref.use }}</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-section">
+      <h2>Ciclo de vida de los componentes</h2>
+      <div class="lifecycle-box">
+        <h3>Hooks principales:</h3>
+        <ul>
+          <li><strong>ngOnInit:</strong> Se ejecuta cuando el componente se inicializa</li>
+          <li><strong>ngOnChanges:</strong> Se ejecuta cuando cambian las propiedades de entrada</li>
+          <li><strong>ngAfterViewInit:</strong> Se ejecuta después de renderizar la vista</li>
+          <li><strong>ngOnDestroy:</strong> Se ejecuta cuando el componente se destruye</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>

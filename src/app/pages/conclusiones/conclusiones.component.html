@@ -1,0 +1,65 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Conclusiones del Tutorial</h1>
+    <p class="subtitle">Resumen de conceptos y próximos pasos</p>
+  </div>
+
+  <div class="content">
+    <section class="section">
+      <h2>Objetivos alcanzados</h2>
+      <p class="intro-text">
+        En este tutorial hemos cubierto los fundamentos de Angular, desde su instalación hasta
+        la comprensión de su arquitectura. Los siguientes objetivos han sido completados:
+      </p>
+
+      <div class="objectives-list">
+        <div *ngFor="let objective of objectives; let i = index" class="objective-item">
+          <div class="objective-number">{{ i + 1 }}</div>
+          <div class="objective-text">{{ objective }}</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Conceptos clave aprendidos</h2>
+      <div class="takeaways-grid">
+        <div *ngFor="let takeaway of keyTakeaways" class="takeaway-card">
+          <h3>{{ takeaway.title }}</h3>
+          <p>{{ takeaway.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Próximos pasos recomendados</h2>
+      <p class="intro-text">
+        Para continuar tu aprendizaje en Angular, aquí hay una lista de temas que puedes explorar:
+      </p>
+
+      <div class="next-steps">
+        <div *ngFor="let step of nextSteps; let i = index" class="step-item">
+          <span class="step-icon">{{ i + 1 }}</span>
+          <span class="step-text">{{ step }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conclusion-message">
+      <h2>¡Felicidades!</h2>
+      <div class="message-box">
+        <p>
+          Has completado este tutorial introductorio de Angular. Ahora posees los conocimientos
+          fundamentales para comenzar a desarrollar aplicaciones web modernas y profesionales.
+        </p>
+        <p>
+          <strong>Recuerda:</strong> La mejor forma de aprender es practicando. Crea tus propios proyectos,
+          experimenta con los conceptos aprendidos y no dudes en consultar la documentación oficial cuando
+          lo necesites.
+        </p>
+        <p>
+          ¡Bienvenido al mundo de Angular!
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

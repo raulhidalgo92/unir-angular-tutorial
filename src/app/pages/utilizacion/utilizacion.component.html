@@ -1,0 +1,66 @@
+<div class="page-container">
+  <div class="page-header">
+    <h1>Utilización del Framework</h1>
+    <p class="subtitle">Cómo crear y ejecutar aplicaciones con Angular</p>
+  </div>
+
+  <div class="content">
+    <section class="section">
+      <h2>¿Cómo empezar a crear una aplicación?</h2>
+
+      <h3>Métodos de creación</h3>
+      <div class="methods-grid">
+        <div *ngFor="let method of creationMethods" class="method-card">
+          <h4>{{ method.title }}</h4>
+          <div class="command-box">
+            <code>{{ method.command }}</code>
+          </div>
+          <p class="description">{{ method.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Estructura típica de un proyecto Angular</h2>
+      <div class="structure-list">
+        <div *ngFor="let item of appStructure" class="structure-item">
+          <span class="folder-icon">📁</span>
+          <div class="item-content">
+            <strong>{{ item.name }}</strong>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>¿Cómo visualizar los resultados?</h2>
+
+      <div class="execution-guide">
+        <div *ngFor="let step of developmentSteps; let i = index" class="execution-step">
+          <div class="step-number">{{ i + 1 }}</div>
+          <div class="step-details">
+            <h4>{{ step.title }}</h4>
+            <div class="command-box">
+              <code>{{ step.command }}</code>
+            </div>
+            <div class="result-highlight">
+              <strong>Resultado:</strong> {{ step.result }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-section">
+      <h3>Características del servidor de desarrollo</h3>
+      <ul class="features-list">
+        <li><strong>Hot Module Replacement (HMR):</strong> Los cambios se ven en tiempo real</li>
+        <li><strong>Source Maps:</strong> Facilita el debugging del código TypeScript</li>
+        <li><strong>Compilación automática:</strong> Detecta y compila cambios automáticamente</li>
+        <li><strong>Live Reload:</strong> Recarga automática del navegador cuando es necesario</li>
+        <li><strong>CORS habilitado:</strong> Facilita integración con APIs externas</li>
+      </ul>
+    </section>
+  </div>
+</div>
