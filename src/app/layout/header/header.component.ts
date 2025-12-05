@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  mobileMenuOpen = false;
+  
   navItems = [
     { label: 'Justificación', route: '/justificacion' },
     { label: 'Instalación', route: '/instalacion' },
@@ -18,4 +20,12 @@ export class HeaderComponent {
     { label: 'Funcionamiento', route: '/funcionamiento' },
     { label: 'Conclusiones', route: '/conclusiones' }
   ];
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen = false;
+  }
 }
